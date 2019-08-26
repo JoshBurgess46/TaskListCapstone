@@ -5,7 +5,6 @@ C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\bin\Debug\netcoreapp2.
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\bin\Debug\netcoreapp2.2\TaskListCapstone.pdb
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\bin\Debug\netcoreapp2.2\TaskListCapstone.Views.dll
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\bin\Debug\netcoreapp2.2\TaskListCapstone.Views.pdb
-C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\TaskListCapstone.csprojAssemblyReference.cache
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\TaskListCapstone.csproj.CoreCompileInputs.cache
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\TaskListCapstone.RazorAssemblyInfo.cache
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\TaskListCapstone.RazorAssemblyInfo.cs
@@ -22,6 +21,8 @@ C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\Razor\Views\TaskList\AddTask.g.cshtml.cs
+C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\Razor\Views\TaskList\TaskList.g.cshtml.cs
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\TaskListCapstone.RazorTargetAssemblyInfo.cache
@@ -30,5 +31,4 @@ C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\TaskListCapstone.dll
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\TaskListCapstone.pdb
 C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\TaskListCapstone.csproj.CopyComplete
-C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\Razor\Views\TaskList\TaskList.g.cshtml.cs
-C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\Razor\Views\TaskList\AddTask.g.cshtml.cs
+C:\Users\JoshB\OneDrive\TaskListCapstone\TaskListCapstone\obj\Debug\netcoreapp2.2\TaskListCapstone.csprojAssemblyReference.cache

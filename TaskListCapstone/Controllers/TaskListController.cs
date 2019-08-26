@@ -27,9 +27,9 @@ namespace TaskListCapstone.Controllers
 
             foreach (var item in databaseList)
             {
-                if (id==item.Id)
+                if (id == item.UserId)
                 {
-
+                    newTask.Add(item);
                 }
             }
             return View(newTask);
@@ -44,9 +44,39 @@ namespace TaskListCapstone.Controllers
         {
             AspNetUsers thisUser = _context.AspNetUsers.Where(u => u.UserName == User.Identity.Name).First();
             newTask.Description = thisUser.Id;
-            _context.TaskList.Add(newTask);
-            _context.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                _context.TaskList.Add(newTask);
+                _context.SaveChanges();
+            }
+           
             return RedirectToAction("TaskList");
+        }
+        public IActionResult Delete(TaskList newTask)
+        {
+            AspNetUsers thisUser = _context.AspNetUsers.Where(u => u.UserName == User.Identity.Name).First();
+            newTask.Description = thisUser.Id;
+            if (ModelState.IsValid)
+            {
+                _context.TaskList.Remove(newTask);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("TaskList");
+        }
+        public IActionResult Update(TaskList taskId)
+        {
+            TaskList found = _context.TaskList.Find(taskId.UserId);
+            if (ModelState.IsValid)
+            {
+                found.Complete = "yes";
+                _context.Entry(found).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                _context.Update(found);
+                _context.SaveChanges();
+                return RedirectToAction("TaskList");
+            }
+            
+            return View("Update",found);
         }
     }
 }

@@ -150,6 +150,13 @@ namespace TaskListCapstone.Models
                     .HasMaxLength(450);
 
                 entity.Property(e => e.DueDate).HasColumnType("date");
+
+                entity.Property(e => e.UserId).HasMaxLength(450);
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.TaskList)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK__TaskList__UserId__71D1E811");
             });
         }
     }

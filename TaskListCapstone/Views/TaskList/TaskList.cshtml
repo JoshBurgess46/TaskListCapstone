@@ -2,8 +2,29 @@
 @{
     ViewData["Title"] = "TaskList";
 }
-
+@model IEnumerable<TaskListCapstone.Models.TaskList>
 <h1>Task List</h1>
+
+<table class="table">
+    <tr>
+        <th>Description</th>
+        <th>Task</th>
+        <th>Complete</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        @item.Description
+        @item.DueDate.Year
+        @item.Complete
+    }
+
+
+
+
+</table>
+
+
 
 
 
