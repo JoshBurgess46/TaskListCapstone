@@ -42,8 +42,8 @@ namespace TaskListCapstone.Controllers
         [HttpPost]
         public IActionResult AddTask(TaskList newTask)
         {
-            AspNetUsers thisUser = _context.AspNetUsers.Where(u => u.UserName == User.Identity.Name).First();
-            newTask.Description = thisUser.Id;
+            string Id = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            newTask.UserId = Id;
             if (ModelState.IsValid)
             {
                 _context.TaskList.Add(newTask);
@@ -52,13 +52,12 @@ namespace TaskListCapstone.Controllers
            
             return RedirectToAction("TaskList");
         }
-        public IActionResult Delete(TaskList newTask)
+        public IActionResult Delete(int Id)
         {
-            AspNetUsers thisUser = _context.AspNetUsers.Where(u => u.UserName == User.Identity.Name).First();
-            newTask.Description = thisUser.Id;
+            TaskList found = _context.TaskList.Find(Id);  
             if (ModelState.IsValid)
             {
-                _context.TaskList.Remove(newTask);
+                _context.TaskList.Remove(found);
                 _context.SaveChanges();
             }
 
@@ -67,16 +66,17 @@ namespace TaskListCapstone.Controllers
         public IActionResult Update(TaskList taskId)
         {
             TaskList found = _context.TaskList.Find(taskId.UserId);
-            if (ModelState.IsValid)
+            if (ModelState.IsValid&&found!=null)
             {
                 found.Complete = "yes";
+
                 _context.Entry(found).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                 _context.Update(found);
                 _context.SaveChanges();
-                return RedirectToAction("TaskList");
             }
             
-            return View("Update",found);
+                return RedirectToAction("TaskList");
+
         }
     }
 }

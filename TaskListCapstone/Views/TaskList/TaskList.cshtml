@@ -14,9 +14,17 @@
     </tr>
     @foreach (var item in Model)
     {
-        @item.Description
-        @item.DueDate.Year
-        @item.Complete
+<tr>
+    <td>@item.Description</td>
+    <td>@item.DueDate.Year</td>
+    <td>@item.Complete</td>
+
+    <td><a href="/TaskList/Update?Id=@item.UserId"><input type="submit" value="Update" class="btn-dark" /></a></td>
+    <td><a href="/TaskList/Delete?Id=@item.UserId"><input type="submit" value="Delete" class="btn-dark" /></a></td>
+
+
+
+</tr>
     }
 
 

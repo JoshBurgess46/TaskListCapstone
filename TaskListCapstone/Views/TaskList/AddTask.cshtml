@@ -2,6 +2,24 @@
 @{
     ViewData["Title"] = "AddTask";
 }
-
+@model TaskList
 <h1>Add a Task</h1>
 
+<div>
+    <form action="/TaskList/AddTask" method="post">
+        <input type="text" name="Description" value="" />
+        <input type="date" name="Due Date" value="" />
+
+        <select name="Complete">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select>
+
+        Complete
+        <input type="submit" value="Submit" />
+
+    </form>
+
+
+
+</div>
